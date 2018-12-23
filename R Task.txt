@@ -1,0 +1,162 @@
+Valid<-c("A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","U","V","W","X","Y","Z")
+as.character(Valid)
+KeV<-function(x,y)
+{
+  if(((match(x[2],Valid)-1)>0))
+	{
+       if((match(x[3],Valid)-1)>0)
+       {
+         L1<-(match(x[3],Valid)-1)*999*24
+         if((match(x[5],Valid)-1)>0)
+         {
+           L2<-((match(x[5],Valid)-1)*999)+x[4]
+           Pos1<-((match(x[2],Valid)-1)*575424)+L1+L2
+           Print("Position of First Vehicle in Market ")
+           print(Pos1)
+         }
+         else
+         {
+           Pos1<-((match(x[2],Valid)-1)*575424)+L1+x[4]
+           print("Position of First Vehicle in Market ")
+           print(Pos1)
+         }
+       }
+       else 
+       {
+         if((match(x[5],Valid)-1)>0)
+         {
+           L2<-((match(x[5],Valid)-1)*999)+x[4]
+           Pos1<-((match(x[2],Valid)-1)*575424)+L2
+           print("Position of First Vehicle in Market ")
+           print(Pos1)
+         }
+         else
+         {
+           Pos1<-((match(x[2],Valid)-1)*575424)+x[4]
+           print("Position of First Vehicle in Market ")
+           print(Pos1)
+         }
+       }
+       Pos1
+  }
+  else
+  {
+    if((match(x[3],Valid)-1)>0)
+    {
+      L1<-(match(x[3],Valid)-1)*999*24
+      if((match(x[5],Valid)-1)>0)
+      {
+        L2<-((match(x[5],Valid)-1)*999)+x[4]
+        Pos1<-L1+L2
+        Print("Position of First Vehicle in Market ")
+        print(Pos1)
+      }
+      else
+      {
+        Pos1<-L1+x[4]
+        print("Position of First Vehicle in Market ")
+        print(Pos1)
+      }
+    }
+    else 
+    {
+      if((match(x[7],Valid)-1)>0)
+      {
+        L2<-((match(x[5],Valid)-1)*999)+x[4]
+        Pos1<-L2
+        print("Position of First Vehicle in Market ")
+        print(Pos1)
+      }
+      else
+      {
+        Pos1<-x[4]
+        print("Position of First Vehicle in Market ")
+        print(Pos1)
+      }
+    }
+    Pos1
+  }
+  if(((match(y[2],valid)-1)>0)
+     {
+       if((match(y[3],Valid)-1)>0)
+       {
+         M1<-(match(y[3],Valid)-1)*999*24
+         if((match(y[5],Valid)-1)>0)
+         {
+           M2<-((match(y[5],Valid)-1)*999)+y[4]
+           Pos2<-((match(M[2],Valid)-1)*575424)+M1+M2
+           Print("Position of Second Vehicle in Market ")
+           print(Pos2)
+         }
+         else
+         {
+           Pos2<-((match(y[2],Valid)-1)*575424)+M1+y[4]
+           print("Position of Second Vehicle in Market ")
+           print(Pos2)
+         }
+       }
+       else 
+       {
+         if((match(y[5],Valid)-1)>0)
+         {
+           M2<-((match(y[5],Valid)-1)*999)+y[4]
+           Pos2<-((match(y[2],Valid)-1)*575424)+M2
+           print("Position of Second Vehicle in Market ")
+           print(Pos2)
+         }
+         else
+         {
+           Pos2<-((match(y[2],Valid)-1)*575424)+y[4]
+           print("Position of Second Vehicle in Market ")
+           print(Pos2)
+         }
+       }
+      Pos2
+  }
+  else
+  {
+    if((match(y[3],Valid)-1)>0)
+    {
+      M1<-(match(y[3],Valid)-1)*999*24
+      if((match(y[5],Valid)-1)>0)
+      {
+        M2<-((match(y[5],Valid)-1)*999)+y[4]
+        Pos2<-M1+M2
+        Print("Position of Second Vehicle in Market ")
+        print(Pos2)
+      }
+      else
+      {
+        Pos2<-M1+y[4]
+        print("Position of Second Vehicle in Market ")
+        print(Pos2)
+      }
+    }
+    else 
+    {
+      if((match(y[5],Valid)-1)>0)
+      {
+        M2<-((match(y[5],Valid)-1)*999)+y[4]
+        Pos2<-M2
+        print("Position of Second Vehicle in Market ")
+        print(Pos2)
+      }
+      else
+      {
+        Pos2<-y[4]
+        print("Position of Second Vehicle in Market ")
+        print(Pos2)
+      }
+    }
+    Pos2
+  }
+  Vehi_between<-(Pos2-Pos1)*(-1)
+  print("The Number of vehicles between the Two Number Plates is ")
+  print(Vehi_between)
+} 
+
+x<-c("K","A","B",009,"A")
+y<-c("K","C","A",979,"T")
+KeV(x,y)
+       
+        
